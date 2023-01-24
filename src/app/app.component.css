@@ -1,3 +1,49 @@
 .example-spacer {
     flex: 1 1 auto;
   }
+
+.navbar{
+    justify-content: space-between;
+}
+span{
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+mat-sidenav-container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+}
+mat-sidenav,mat-sidenav-content{
+    padding: 16px;
+}
+
+mat-sidenav{
+    background-color: rgb(255, 127, 178);
+    width: 200px;
+}
+
+.tp-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+    width:100px;   
+ }
+
+/* button */
+
+  .example-form {
+    min-width: 10px;
+    max-width: 50px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
