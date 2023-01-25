@@ -1,5 +1,5 @@
-<mat-sidenav-container>
-  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+<mat-sidenav-container color="primary">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" color="primary">
     <div class="sidenav">
       <div class="mat-display-1">Home</div>
       <section class = "tp-section">
@@ -14,20 +14,24 @@
           </section>
     </div>
   </mat-sidenav>
+
+
+  <!------main content---------->
   <mat-sidenav-content>
  
-    <mat-toolbar class="navbar" >
+    <mat-toolbar class="navbar">
       <div>
         <button mat-icon-button color="primary" (click)="sidenav.toggle()" aria-label="Example icon button with a menu icon">
         <mat-icon>menu</mat-icon>
         </button>
+        <a class="brand">
+        <span >Book Movie Ticket</span>
+      </a>
       </div>
-      <div>
-        <span>Book Movie Ticket</span>
-      </div>
+      
   
       <div>
-        <span>Login / Signin</span>
+        <span>Login / Signup</span>
         <!-- <span>Log out</span> -->
         <span>search
           <input MatInput>
@@ -38,7 +42,9 @@
       </div>
   
     </mat-toolbar>
-
+   
   </mat-sidenav-content>
 
 </mat-sidenav-container>
+
+<router-outlet></router-outlet>

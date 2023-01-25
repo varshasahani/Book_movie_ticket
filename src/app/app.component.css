@@ -17,14 +17,14 @@ mat-sidenav-container{
     bottom: 0;
     left: 0;
     right: 0;
-    background: #eee;
+    background: rgb(75, 73, 74);
 }
 mat-sidenav,mat-sidenav-content{
     padding: 16px;
 }
 
 mat-sidenav{
-    background-color: rgb(255, 127, 178);
+    background-color:black;
     width: 200px;
 }
 
@@ -46,4 +46,8 @@ mat-sidenav{
   
   .example-full-width {
     width: 100%;
+  }
+  .brand{
+    text-align: center;
+
   }
