@@ -7,15 +7,16 @@
     <mat-form-field appearance="fill">
       <mat-label>Select</mat-label>
       <mat-select (selectionChange)="onChange($event)">
-        <!-- <mat-option value="">All</mat-option> -->
+        <mat-option value="">All</mat-option> 
         <mat-option value="Hindi">Hindi</mat-option>
         <mat-option value="English">English</mat-option>
       </mat-select>
     </mat-form-field>
   </div>
 </div>
-  <mat-grid-list [cols]="cols" rowHeight="48:90">
-    <mat-grid-tile *ngFor="let movie of movies" cols="1" rows="2">
+  <mat-grid-list [cols]="cols" [rowHeight]=rowHeight class="grid">
+
+    <mat-grid-tile *ngFor="let movie of movies">
       <mat-card class="dashboard-card">
         <mat-card-header>
           <mat-card-title color="primary">

@@ -14,6 +14,7 @@ import * as _ from 'lodash';
 export class DashboardComponent implements OnInit {
   /** Based on the screen size, switch from standard to one column per row */
   cols=4;
+  rowHeight="48:90";
   public movies:any[]=[];
   apiResponse:any=[];
   // cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
@@ -42,6 +43,21 @@ export class DashboardComponent implements OnInit {
     private _movieService:MovieService) {}
 
     ngOnInit(){
+      this.breakpointObserver.observe(Breakpoints.Handset)
+      .subscribe(result => {
+
+        if (result.matches) {
+          this.cols=1;
+        }
+      });
+
+      this.breakpointObserver.observe(Breakpoints.Web)
+      .subscribe(result => {
+
+        if (result.matches) {
+          this.cols=4;
+        }
+      });
       
       this._movieService.getMovies()
       .subscribe(data=>{
