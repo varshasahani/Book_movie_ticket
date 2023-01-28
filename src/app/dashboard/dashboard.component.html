@@ -1,0 +1,52 @@
+<div class="grid-container">
+  <div class="selector">
+  <div>
+  <h1 class="mat-h1">Movies</h1>
+</div>
+  <div class="selector">
+    <mat-form-field appearance="fill">
+      <mat-label>Select</mat-label>
+      <mat-select>
+        <mat-option value="one">Hindi</mat-option>
+        <mat-option value="two">English</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+  <mat-grid-list [cols]="cols" rowHeight="350px">
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{card.title}}
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content class="dashboard-card-content">
+          <mat-card-content>
+            <p>
+              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+              bred for hunting.
+            </p>
+            <hr>
+            <h4>Release Date: '28/01/23' </h4>
+            <hr>
+            <h4>Language:Hindi</h4>
+            <hr>
+          </mat-card-content>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button class="example-full-width" color="warn" appearance="outline" (click)="openLogin()">Book Tickets</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

@@ -1,16 +1,52 @@
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
-<p>
-  <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>My App</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
-  </mat-toolbar>
-</p>
+<!-- <mat-sidenav-container color="primary">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" color="primary">
+    <div class="sidenav">
+      <div class="mat-display-1">Home</div>
+      <section class = "tp-section">
+        <h1>Movies </h1>
+        </section>
+     
+      <section class = "tp-section">
+        <h1>History </h1>
+        </section>
+        <section class = "tp-section">
+          <h1>Profile</h1>
+          </section>
+    </div>
+  </mat-sidenav>
+
+
+  ----main content----
+  <mat-sidenav-content>
+ 
+    <mat-toolbar class="navbar">
+      <div>
+        <button mat-icon-button color="primary" (click)="sidenav.toggle()" aria-label="Example icon button with a menu icon">
+        <mat-icon>menu</mat-icon>
+        </button>
+        <a class="brand">
+        <span >Book Movie Ticket</span>
+      </a>
+      </div>
+      
+  
+      <div>
+        <span>Login / Signup</span>
+        - <span>Log out</span> --
+        <span>search
+          <input MatInput>
+          <button mat-icon-button color="primary" aria-label="search icon">
+            <mat-icon>search</mat-icon>
+          </button>
+        </span>
+      </div>
+  
+    </mat-toolbar>
+   <app-home></app-home>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+<router-outlet></router-outlet>-->
+
+<app-sidebar></app-sidebar>
