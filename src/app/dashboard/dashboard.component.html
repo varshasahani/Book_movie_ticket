@@ -16,10 +16,10 @@
 </div>
   <mat-grid-list [cols]="cols" [rowHeight]=rowHeight class="grid">
 
-    <mat-grid-tile *ngFor="let movie of movies">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title color="primary">
+    <mat-grid-tile *ngFor="let movie of movies" >
+      <mat-card class="dashboard-card" >
+        <mat-card-header >
+          <mat-card-title>
             {{movie.name}}
             <!-- <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
               <mat-icon>more_vert</mat-icon>
@@ -43,7 +43,7 @@
           </mat-card-content>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-raised-button class="example-full-width" color="warn" appearance="outline" (click)="openLogin()">Book Tickets</button>
+          <button mat-raised-button class="button" color="warn"  appearance="outline" (click)="openLogin()">Book Tickets</button>
         </mat-card-actions>
       </mat-card>
     </mat-grid-tile>
