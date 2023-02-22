@@ -1,30 +1,44 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'push' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-    <mat-toolbar color="primary">Menu</mat-toolbar>
+<mat-sidenav-container class="sidenav-container mat-app-background" [ngClass]="{'dark-theme':isDarktheme}">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'push' : 'side'" [opened]="opened">
+    <!-- <mat-toolbar>Menu</mat-toolbar>
+    <mat-divider></mat-divider> -->
     <mat-nav-list>
-      <a mat-list-item href="#">Home</a>
-      <a mat-list-item href="#">Profile</a>
-      <a mat-list-item href="#">History</a>
+      <a mat-list-item routerLink="/movies">All Movies</a>
+      <!-- <mat-divider></mat-divider> -->
+      <!-- <a mat-list-item href="#" color="white">Profile</a>
+      <mat-divider></mat-divider> -->
+      <a mat-list-item href="/myBookings" *ngIf="userService.user | async">My Bookings</a>
+      <!-- <mat-divider></mat-divider> -->
+      <a mat-list-item (click)="openLogin()" *ngIf="!(userService.user | async)">Sign in</a>
+      <!-- <mat-divider></mat-divider> -->
+      <a mat-list-item class="button" *ngIf="userService.user | async" appearance="outline"
+        (click)="openLogout()">logout</a>
+
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+    <mat-toolbar class="navbar">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>bookMovieTickets</span>
+      <span>Book Movie Tickets</span>
+      <!-- <div class="toggle">
+
+        <mat-icon class="mr-8">brightness_5</mat-icon>
+        <mat-slide-toggle class="mr-8" [(ngModel)]="isDarktheme" labelPosition="before"
+          (change)="onselectionTheme()"></mat-slide-toggle>
+
+        <mat-icon>bedtime</mat-icon>
+      </div> -->
+
+
+
+
     </mat-toolbar>
     <!-- Add Content Here -->
-    <app-dashboard></app-dashboard>
-    
+    <router-outlet></router-outlet>
+
 
   </mat-sidenav-content>
 </mat-sidenav-container>

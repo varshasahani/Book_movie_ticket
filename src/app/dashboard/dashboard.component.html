@@ -1,5 +1,4 @@
 <div class="grid-container">
-  <div class="selector">
   <!-- <div>
   <h1 class="mat-h1">Movies</h1>
 </div> -->
@@ -7,18 +6,17 @@
     <mat-form-field appearance="fill">
       <mat-label>Select</mat-label>
       <mat-select (selectionChange)="onChange($event)">
-        <mat-option value="">All</mat-option> 
+        <mat-option value="">All</mat-option>
         <mat-option value="Hindi">Hindi</mat-option>
         <mat-option value="English">English</mat-option>
       </mat-select>
     </mat-form-field>
   </div>
-</div>
-  <mat-grid-list [cols]="cols" [rowHeight]=rowHeight class="grid">
 
-    <mat-grid-tile *ngFor="let movie of movies" >
-      <mat-card class="dashboard-card" >
-        <mat-card-header >
+  <ul class="container">
+    <li class="item" *ngFor="let movie of movies">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
           <mat-card-title>
             {{movie.name}}
             <!-- <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
@@ -30,22 +28,24 @@
             </mat-menu> -->
           </mat-card-title>
         </mat-card-header>
-    
+
         <img mat-card-image src="{{movie.image}}" alt="Photo of a Shiba Inu" height="250">
         <mat-card-content class="dashboard-card-content">
           <mat-card-content>
-            
-            <hr>
             <h4>Release Date: {{movie.releaseDate}} </h4>
-            <hr>
             <h4>Language:{{movie.langauge}}</h4>
-            <hr>
           </mat-card-content>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-raised-button class="button" color="warn"  appearance="outline" (click)="openLogin()">Book Tickets</button>
+
+
+          <!-- <app-movie-form [movie]="movie"></app-movie-form> -->
+          <!-- <button mat-raised-button class="button" color="warn"  appearance="outline" (click)="openLogin()">Book Tickets</button> -->
+          <button mat-stroked-button class="button" color="warn" appearance="outline" (click)="onSelect(movie)"
+            [class.selected]="isSelected(movie)">Book Tickets</button>
         </mat-card-actions>
       </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+    </li>
+  </ul>
+
 </div>

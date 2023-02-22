@@ -1,0 +1,13 @@
+table {
+    width: 90%;
+    margin: 60px;
+}
+
+.mat-header-cell {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mat-stroked-button {
+    border-color: rgb(223, 92, 92);
+}
