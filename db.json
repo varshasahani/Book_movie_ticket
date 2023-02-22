@@ -1,0 +1,187 @@
+{
+  "posts": [],
+  "users": [
+    {
+      "fullname": "varsha",
+      "email": "varsha@gmail.com",
+      "password": "password",
+      "password2": "password",
+      "id": 2
+    },
+    {
+      "fullname": "varsha",
+      "email": "varsha@gmail.co",
+      "password": "password",
+      "password2": "password",
+      "id": 3
+    },
+    {
+      "fullname": "varsha1",
+      "email": "varsha1@gmail.com",
+      "password": "password",
+      "password2": "password",
+      "id": 4
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  },
+  "movies": [
+    {
+      "id": 1,
+      "name": "Puss in Boots",
+      "releaseDate": "15/01/2023",
+      "langauge": "English",
+      "image": "assets/images/p&b.jpeg",
+      "dates": {
+        "23/02/2023": {
+          "slots": {
+            "12:00": 0,
+            "9:00": 0,
+            "6:00": 0
+          }
+        },
+        "24/02/2023": {
+          "slots": {
+            "12:00": 6,
+            "9:00": 12,
+            "6:00": 54
+          }
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ant-Man and the Wasp",
+      "releaseDate": "17/02/2023",
+      "langauge": "English",
+      "image": "assets/images/download.jpeg",
+      "dates": {
+        "17/02/2023": {
+          "slots": {
+            "12:00": 0,
+            "9:00": 0,
+            "6:00": 47
+          }
+        },
+        "18/02/2023": {
+          "slots": {
+            "12:00": 2,
+            "9:00": 0,
+            "6:00": 28
+          }
+        },
+        "19/02/2023": {
+          "slots": {
+            "12:00": 10,
+            "9:00": 12,
+            "6:00": 54
+          }
+        },
+        "20/02/2023": {
+          "slots": {
+            "12:00": 10,
+            "9:00": 12,
+            "6:00": 54
+          }
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "Avatar",
+      "releaseDate": "21/12/2022",
+      "langauge": "English",
+      "image": "assets/images/avatar.jpeg",
+      "seats": "9",
+      "description": "'To explore Pandora, genetically matched human scientists use Na'vi-human hybrids called 'avatars.'Paraplegic Marine Jake Sully is sent to Pandora to replace his deceased identical twin, who had signed up to be an operator.'",
+      "dates": {
+        "23/02/2023": {
+          "slots": {
+            "12:00": 0,
+            "9:00": 0,
+            "6:00": 0
+          }
+        },
+        "24/02/2023": {
+          "slots": {
+            "12:00": 4,
+            "9:00": 0,
+            "6:00": 1
+          }
+        }
+      }
+    },
+    {
+      "id": 4,
+      "name": "Gandhi Godse",
+      "releaseDate": "27/01/2023",
+      "langauge": "Hindi",
+      "image": "assets/images/gandhi.jpeg",
+      "seats": "9",
+      "dates": {
+        "23/02/2023": {
+          "slots": {
+            "12:00": 0,
+            "9:00": 0,
+            "6:00": 0
+          }
+        },
+        "24/02/2023": {
+          "slots": {
+            "12:00": 6,
+            "9:00": 12,
+            "6:00": 54
+          }
+        }
+      }
+    },
+    {
+      "id": 5,
+      "name": "Pathaan",
+      "releaseDate": "26/01/2023",
+      "langauge": "Hindi",
+      "image": "assets/images/pathan.jpeg",
+      "seats": "9",
+      "dates": {
+        "23/02/2023": {
+          "slots": {
+            "12:00": 0,
+            "9:00": 0,
+            "6:00": 0
+          }
+        },
+        "24/02/2023": {
+          "slots": {
+            "12:00": 6,
+            "9:00": 5,
+            "6:00": 54
+          }
+        }
+      }
+    }
+  ],
+  "movie-form": [
+    {
+      "userId": 2,
+      "movieId": 5,
+      "movieName": "Pathaan",
+      "date": "2023-02-23T18:30:00.000Z",
+      "time": "9:00",
+      "seats": 4,
+      "price": 400,
+      "id": 9
+    },
+    {
+      "userId": 2,
+      "movieId": 3,
+      "movieName": "Avatar",
+      "date": "2023-02-23T18:30:00.000Z",
+      "time": "6:00",
+      "seats": 1,
+      "price": 100,
+      "id": 10
+    }
+  ]
+}

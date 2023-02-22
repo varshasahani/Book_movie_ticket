@@ -1,17 +1,37 @@
+.navbar {
+  justify-content: space-between;
+  background-image: -moz-linear-gradient(red, yellow);
+}
+
 .sidenav-container {
   height: 100%;
+  /* background-image: linear-gradient(rgba(75, 76, 80, 0.63),
+      rgba(65, 65, 68, 0.4)),
+    url("/assets/images/seats.avif"); */
+
 }
 
 .sidenav {
   width: 200px;
+  /* background-image: linear-gradient(rgba(77, 78, 86, 0.63),
+      rgba(65, 65, 68, 0.4)),
+    url("/assets/images/seats.avif");
+  border: 0ch; */
+
 }
 
 .sidenav .mat-toolbar {
   background: inherit;
 }
 
-.mat-toolbar.mat-primary {
+.mat-toolbar {
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+.toggle {
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }

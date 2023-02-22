@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Payment</h1>
+<div mat-dialog-content>
+    Total amount to pay {{data.price}}
+</div>
+<div mat-dialog-actions style=" margin-right: 8px;">
+    <button mat-button mat-dialog-close (click)="payment()">Pay</button>
+    <button mat-button mat-dialog-close cdkFocusInitial>Cancel</button>
+</div>

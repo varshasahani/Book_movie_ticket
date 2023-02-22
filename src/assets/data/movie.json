@@ -1,7 +1,7 @@
 [
-    {"id":1,"name":"Puss in Boots","releaseDate":"15/01/2023","langauge":"English","image":""},
-    {"id":2,"name":"Avatar:The way of Water","releaseDate":"21/12/2022","langauge":"English","image":""},
-    {"id":3,"name":"Gandhi Godse","releaseDate":"27/01/2023","langauge":"Hindi","image":""},
-    {"id":4,"name":"Pathaan","releaseDate":"26/01/2023","langauge":"Hindi","image":""}
+    {"id":1,"name":"Puss in Boots","releaseDate":"15/01/2023","langauge":"English","image":"assets/images/p&b.jpeg","dates":{"23/02/2023":["12:00","3:00","6:00"],"22/02/2023":["9:00","3:00","9:00"]}},
+    {"id":2,"name":"Avatar","releaseDate":"21/12/2022","langauge":"English","image":"assets/images/avatar.jpeg","dates":{"22/02/23":["12:00","3:00","6:00"],"23/02/23":["9:00","3:00","9:00"]}},
+    {"id":3,"name":"Gandhi Godse","releaseDate":"27/01/2023","langauge":"Hindi","image":"assets/images/gandhi.jpeg","dates":{"21/02/23":["12:00","3:00","6:00"],"24/02/23":["9:00","3:00","9:00"]}},
+    {"id":4,"name":"Pathaan","releaseDate":"26/01/2023","langauge":"Hindi","image":"assets/images/pathan.jpeg","dates":{"21/02/23":["12:00","3:00","6:00"],"23/02/23":["9:00","3:00","9:00"]}}
    
 ]

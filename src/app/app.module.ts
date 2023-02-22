@@ -1,30 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { HomeComponent } from './home/home.component';
+
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
-import {AppRoutingModule,rountingComponents} from './app-routing.module';
+import { AppRoutingModule, rountingComponents } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { LogoutPopup, SidebarComponent } from './sidebar/sidebar.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardModule } from '@angular/material/card';
-import { MatMenuModule } from '@angular/material/menu';
+
 import { MovieService } from './movie.service';
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { MovieFormComponent, PaymentPopup } from './dashboard/movie-form/movie-form.component';
+import { DatePipe } from '@angular/common';
+import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
+import { BookingsComponent, DeletePopup } from './bookings/bookings.component';
+import { EditFormComponent } from './edit-form/edit-form.component';
+
+
 
 
 
@@ -34,8 +35,16 @@ import {HttpClientModule} from '@angular/common/http';
     rountingComponents,
     LoginComponent,
     SidebarComponent,
-    DashboardComponent
-   
+    DashboardComponent,
+    MovieFormComponent,
+    LogoutPopup,
+    PaymentPopup,
+    BookingsComponent,
+    DeletePopup,
+    EditFormComponent
+
+
+
   ],
   imports: [
     BrowserModule,
@@ -44,19 +53,13 @@ import {HttpClientModule} from '@angular/common/http';
     MaterialModule,
     FormsModule,
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatGridListModule,
-    MatCardModule,
-    MatMenuModule,
-    HttpClientModule
-    
-    
+
+    HttpClientModule,
+    ReactiveFormsModule
+
+
   ],
-  providers: [MovieService],
+  providers: [MovieService, DatePipe, { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 3000 } }],
   bootstrap: [AppComponent],
   entryComponents: [LoginComponent]
 })
